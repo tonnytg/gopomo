@@ -25,4 +25,29 @@ Ok do you want to change?
 
 `./goPomo`
 
+<hr>
+
+### Example Output
+```
+$ ./gopomo 
+Time: 25
+Quantity: 1
+Start: 19:13:54 Pomodoro: 0/1
+End: 19:38:54 Pomodoro: 1/1
+Take 5 minutes for a cofee!
+Press Enter to continue!
+```
+
+Custom time:
+
+```
+$ ./gopomo -quant 1 -time 1
+Time: 1
+Quantity: 1
+Start: 19:15:44 Pomodoro: 0/1
+End: 19:16:44 Pomodoro: 1/1
+Take 5 minutes for a cofee!
+Press Enter to continue!
+```
+
 Be Happy!
