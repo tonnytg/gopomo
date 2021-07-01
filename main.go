@@ -28,7 +28,7 @@ func GetTime(x *Pomodoro) (Hour, Min, Sec, Loop int) {
 
 // LogicPomodoro it is a Looping to use var PomoTime for ajust Pomodoro loop
 // You can use 25 minutes or custom minutes do you want.
-func LogicPomodoro(x int) error{
+func LogicPomodoro(x int) error {
 	for i := 0; i < x; i++ {
 		time.Sleep(60 * time.Second)
 	}
@@ -36,8 +36,8 @@ func LogicPomodoro(x int) error{
 }
 
 var (
-	x Pomodoro
-	PomodoroTime int = 1
+	x                Pomodoro
+	PomodoroTime     int = 1
 	PomodoroQuantity int = 1
 )
 
@@ -71,7 +71,7 @@ func main() {
 		fmt.Printf("End: %d:%d:%d Pomodoro: %d/%d\n", x.Hour, x.Min, x.Sec, x.Loop, *PomodoroQuantity)
 
 		switch {
-		case i % 5 == 0:
+		case i%5 == 0:
 			fmt.Printf("Take 15 minutes for a cofee!\nPress Enter to continue!\n")
 			fmt.Scanln()
 		default:
