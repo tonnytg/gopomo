@@ -14,6 +14,7 @@ type Pomodoro struct {
 	Sec   int
 }
 
+// Count is a Method to count loops
 func (p *Pomodoro) Count() {
 	p.Loop = p.Loop + 1
 }
@@ -67,6 +68,8 @@ func main() {
 
 		// GetTime End
 		GetTime(&x)
+
+		// Count loop + 1
 		x.Count()
 		fmt.Printf("End: %d:%d:%d Pomodoro: %d/%d\n", x.Hour, x.Min, x.Sec, x.Loop, *PomodoroQuantity)
 
