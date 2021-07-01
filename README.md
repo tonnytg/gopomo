@@ -4,7 +4,7 @@ Go Pomodoro create a prompt Pomodoro to help your tasks.
 
 ### How to use?
 
-Keep it simples
+Keep it simple
 
 ```go run main.go```
 
@@ -18,6 +18,7 @@ Ok do you want to change?
 `-time` -> Maybe do you wanna change for 15 minutes or more.
 
 <hr>
+
 ### How build this binary?
 
 `go build -o goPomo`
