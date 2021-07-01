@@ -20,10 +20,10 @@ func (p *Pomodoro) Count() {
 
 // GetTime obtain exactly moment time and archive at Type Pomodoro.
 // Hour, Minute and Second have a format of exactly time
-func GetTime(x *Pomodoro) (Hour, Min, Sec, Loop int) {
+func GetTime(x *Pomodoro) (Hour, Min, Sec int) {
 	x.Timer = time.Now()
 	x.Hour, x.Min, x.Sec = x.Timer.Clock()
-	return x.Hour, x.Min, x.Sec, x.Loop
+	return x.Hour, x.Min, x.Sec
 }
 
 // LogicPomodoro it is a Looping to use var PomoTime for ajust Pomodoro loop
