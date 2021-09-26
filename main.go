@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os/exec"
 	"time"
 )
 
@@ -47,7 +48,7 @@ func main() {
 	// PomodoroTime it is a Default time of Pomodoro.
 	// It is 25 minutes with 5 minutes with pause for a break.
 	PomodoroTime := flag.Int("time", 25, "Custom Time")
-	PomodoroQuantity := flag.Int("quant", 1, "Pomodoro Quantity")
+	PomodoroQuantity := flag.Int("repeat", 3, "Pomodoro Quantity")
 
 	// Check some Args different of default
 	flag.Parse()
@@ -58,6 +59,7 @@ func main() {
 	for i := 1; i <= *PomodoroQuantity; i++ {
 		// GetTime Start
 		GetTime(&x)
+		exec.Command("say", "GoPomo start").Output()
 		fmt.Printf("Start: %d:%d:%d Pomodoro: %d/%d\n", x.Hour, x.Min, x.Sec, x.Loop, *PomodoroQuantity)
 
 		// Looping with time sleep
@@ -68,6 +70,7 @@ func main() {
 
 		// GetTime End
 		GetTime(&x)
+		exec.Command("say", "GoPomo stop").Output()
 
 		// Count loop + 1
 		x.Count()
